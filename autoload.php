@@ -1,4 +1,7 @@
 <?php
+
+
+/*
 // funcao que carrega as classes automaticamente
 function __autoload($classe)
 {
@@ -6,6 +9,15 @@ function __autoload($classe)
     include_once "{$classe}.php";
 }
  
+*/
+
+
+	
+spl_autoload_register(function ($classe) {
+	$classe = strtolower($classe);
+	require_once($classe . '.php');
+});
+
 //criando um objeto pessoa
 $funcionario = new Funcionario();
 $funcionario -> SetCodigo(789);
