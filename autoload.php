@@ -2,7 +2,7 @@
 
 
 /*
-// funcao que carrega as classes automaticamente
+// Método Antigo
 function __autoload($classe)
 {
     //busca dentro da pasta classes a classe necessaria...
@@ -11,11 +11,9 @@ function __autoload($classe)
  
 */
 
-
 	
 spl_autoload_register(function ($classe) {
-	$classe = strtolower($classe);
-	require_once($classe . '.php');
+	include_once "{$classe}.php";
 });
 
 //criando um objeto pessoa
