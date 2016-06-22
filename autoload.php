@@ -26,9 +26,9 @@ $funcionario -> Mostrar();
 
 echo "<br /><br /><br /><br />";
 
-$funcionario = new Produto();
-$funcionario -> SetCodigo(123);
-$funcionario -> SetNome ('Teste');
-$funcionario -> SetSalario (7000);
-$funcionario -> Mostrar();
+$produto = new Produto();
+$produto -> SetCodigo(123);
+$produto -> SetNome ('Teste');
+$produto -> SetSalario (7000);
+$produto -> Mostrar();
 ?>
